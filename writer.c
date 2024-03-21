@@ -1,3 +1,12 @@
+// strcpy crea semplicemente un nuovo oggetto di tipo char* con il contenuto all'interno della stringa passata in parametro
+// malloc alloca nella memoria un tot di byte, è comodo usarlo con sizeof() per determinare la grandezza di un tipo di dati
+// free è come il delete di cpp, permette di liberare la memoria
+// spawn() è usato per creare un processo, restituisce un valore in base allo stato del processo
+// open() permette di aprire un file con l'aiuto di un puntatore FILE*
+// fopen() è come open() ma fa parte di stdio.h
+// fwrite() permette di scrivere all'interno di un file
+
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -6,8 +15,12 @@
 
 #define BLOCK_DIM 1024
 
-int main(int argc, char* argv[])
-{
+/**
+*menu che permette di scrivere un buffer dentro un file
+*
+*/
+
+int main(int argc, char* argv[]){
  FILE* file;
  unsigned char buffer[BLOCK_DIM];
  int n;
